@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #93e4c1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-left:10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            margin-bottom: 20px;
+            border-radius:25px;
+        }
+
+        #new-task {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+        }
+
+        #add-btn {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+            text-align: left;
+        }
+
+        #task-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        #task-list li.completed {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            padding: 10px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        #clear-completed {
+            background-color: #007bff;
+        }
+
+        #empty-list {
+            background-color: #dc3545;
+        }
+
+        #save-list {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My to-do list</h1>
+        <p><i>Double-click an item to mark it complete.</i></p>
+        <div class="input-container">
+            <input type="text" id="new-task" >
+            <button id="add-btn">Add</button>
+        </div>
+        <ul id="task-list">
+            <li>My</li>
+            <li class="completed" style="background-color:whitesmoke;">to do</li>
+            <li>list</li>
+        </ul>
+        <div class="buttons">
+            <button id="clear-completed">Clear Completed</button>
+            <button id="empty-list">Empty List</button>
+            <button id="save-list">Save List</button>
+        </div>
+    </div>
+</body>
+</html>
